@@ -56,6 +56,11 @@ body::after {
 }
 
 img { display: block; max-width: 100%; }
+
+/* every photo renders monochrome to hold the MONO palette */
+.hero__art img, .studio__art img, .team__media img, .work__item img {
+  filter: grayscale(1);
+}
 a { color: inherit; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 
