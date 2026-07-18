@@ -44,11 +44,32 @@ python3 -m http.server 8000
 
 ## About the imagery
 
-Because the name is *MONO*, the art direction leans fully into monochrome:
-all imagery is generative black-and-white "strand study" line art (SVG),
-so the site is completely self-contained and loads instantly. Every image
-slot is a plain `<img>` — to use real photography, drop your photos into
-`assets/` and swap the `src` attributes in `index.html`.
+Photography is hotlinked from Shutterstock **preview URLs**, rendered
+black-and-white via a CSS `grayscale` filter to hold the MONO palette.
+Two important notes:
+
+1. **These previews are watermarked comps, not licensed assets.** Before
+   using this site in production, license each image through a Shutterstock
+   account, download the clean files into `assets/img/`, and point the
+   `src` attributes in `index.html` at the local files. The Shutterstock
+   page for every image is linked below.
+2. **Offline fallback:** every photo has an `onerror` handler that swaps in
+   the original generative "strand study" SVG art (`assets/art/`), so the
+   site still looks intentional with no network.
+
+| Slot | Shutterstock image |
+| --- | --- |
+| Hero | [239404387](https://www.shutterstock.com/image-photo/woman-studio-beauty-portrait-black-white-239404387) |
+| Studio | [1161847672](https://www.shutterstock.com/image-photo/modern-bright-beauty-salon-baber-shop-1161847672) |
+| Team, Ava | [2755974775](https://www.shutterstock.com/image-photo/confident-beauty-salon-owner-standing-crossed-2755974775) |
+| Team, Marcus | [1973495021](https://www.shutterstock.com/image-photo/portrait-male-hairdresser-salon-1973495021) |
+| Team, Yuki | [1955521306](https://www.shutterstock.com/image-photo/portrait-professional-hairdresser-beauty-salon-young-1955521306) |
+| Team, Priya | [2690331941](https://www.shutterstock.com/image-photo/professional-hairdresser-does-hairstyle-beautiful-young-2690331941) |
+| Gallery 1 | [1816800308](https://www.shutterstock.com/image-photo/fashion-studio-portrait-lovely-asian-woman-1816800308) |
+| Gallery 2 | [670133266](https://www.shutterstock.com/image-photo/back-view-beautiful-woman-creative-elegant-670133266) |
+| Gallery 3 | [1337381666](https://www.shutterstock.com/image-photo/fashion-studio-portrait-lovely-asian-woman-1337381666) |
+| Gallery 4 | [2586363569](https://www.shutterstock.com/image-photo/hair-movement-beauty-portrait-photography-featuring-2586363569) |
+| Gallery 5 | [527788945](https://www.shutterstock.com/image-photo/beautiful-braid-hairstyle-527788945) |
 
 ## Booking form
 
